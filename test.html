@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Kurodko — Bug Bounty Hunter</title>
+  <meta name="description" content="Portfolio of Kurodko — bug bounty hunter and programmer." />
+  <style>
+    :root{
+      --bg:#0f1724; --card:#0b1220; --muted:#9aa7b2; --accent:#7c5cff; --glass: rgba(255,255,255,0.04);
+      --radius:14px; --gap:1.25rem; --maxw:1100px;
+      color-scheme: dark;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;padding:32px; font-family:Inter,ui-sans-serif,system-ui; background:#071025; color:#e6eef6;}
+    a{color:inherit;text-decoration:none}
+    .container{max-width:var(--maxw);margin:0 auto;display:grid;grid-template-columns: 320px 1fr;gap:2rem;}
+    .card{background:linear-gradient(180deg,var(--card), #081827);padding:20px;border-radius:var(--radius);}
+    .avatar{width:120px;height:120px;border-radius:16px;overflow:hidden;margin:0 auto 12px}
+    .avatar img{width:100%;height:100%;object-fit:cover}
+    h1{font-size:22px;margin:8px 0 0;text-align:center}
+    p.lead{color:var(--muted);font-size:13px;text-align:center;margin:8px 0 12px}
+    .pill{background:var(--glass);padding:6px 10px;border-radius:999px;font-size:13px;color:var(--muted)}
+    ul.skills{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:8px}
+    ul.skills li{background:rgba(255,255,255,0.03);padding:6px 8px;border-radius:8px;font-size:13px}
+    main{min-height:100vh}
+    .projects{display:grid;grid-template-columns:1fr;gap:18px;margin-top:20px}
+    .project{padding:16px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01))}
+    .project h3{margin:0 0 8px}
+    .stack{font-size:13px;color:var(--muted);margin-bottom:10px}
+    footer{margin-top:28px;color:var(--muted);font-size:13px;text-align:center}
+    .small-img {
+      width: 25%;
+      height: auto;
+    }
+
+    .large-img {
+      width: 80%;
+      height: auto;
+    }
+
+    .project img:nth-of-type(n+2) {
+width: 80%;
+}
+    @media (max-width:960px){.container{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- SIDEBAR -->
+    <aside class="card">
+      <div class="avatar"><img src="logo.jpg" alt="My avatar"></div>
+      <h1>Kurodko</h1>
+      <p class="lead">Bug Bounty Hunter • Cybersecurity Enthusiast</p>
+      <div class="sidebar-section">
+        <div class="section-title">Profiles</div>
+        <a href="https://hackerone.com/kurodko" target="_blank">HackerOne: hackerone.com/kurodko</a>
+      </div>
+      <div class="sidebar-section">
+        <div class="section-title">Skills</div>
+        <ul class="skills">
+          <li>Bug Bounty Hunting</li>
+          <li>Web Security</li>
+          <li>Linux</li>
+          <li>Python</li>
+          <li>C++</li>
+        </ul>
+      </div>
+    </aside>
+
+    <!-- MAIN -->
+    <main>
+      <section class="card">
+        <h2>About Me</h2>
+        <p>I am a bug bounty hunter specializing in web application security. My most notable work includes uncovering vulnerabilities on <strong>Chess.com</strong> and a <strong>multi‑billion dollar company</strong>. I document my findings and responsibly disclose them via HackerOne, where I maintain an active profile.</p>
+      </section>
+
+      <section id="projects" class="projects">
+        <article class="project card">
+          <h3>Bug Bounty — Chess.com</h3>
+          <p>Discovered and responsibly disclosed 6+ vulnerabilities on chess.com as part of my bug bounty work. </p>
+        </article>
+
+        <article class="project card">
+          <h3>Bug Bounty — Multi-Billion Company</h3>
+          <p>Identified a vulnerability affecting a multi-billion dollar company. The issue was reported responsibly and acknowledged by the security team.</p>
+        </article>
+
+        <article class="project card">
+          <h3>Human Benchmark Reaction Bot</h3>
+          <img src="project-2.png" alt="Human Benchmark Reaction Bot"class="large-img">
+          <div class="stack">Python • BetterCam</div>
+          <p>Bot leveraging Bettercam library for ultra-fast reaction times in the Human Benchmark test.</p>
+        </article>
+
+        <article class="project card">
+          <h3>Grade Checker</h3>
+          <img src="project-3.png" alt="Grade Checker"class="large-img">
+          <div class="stack">Python • Selenium • Requests • BeautifulSoup</div>
+          <p>Automated bot to check grades, scrape results into text files or screenshots, and handle authentication efficiently.</p>
+        </article>
+
+        <article class="project card">
+          <h3>Human Benchmark Memory Beater</h3>
+          <img src="project-4.png" alt="Human Benchmark Memory Beater"class="large-img">
+          <div class="stack">Python • OpenCV • NumPy • PyAutoGUI</div>
+          <p>Bot designed to beat the visual memory test on Human Benchmark, reaching level 39 using optimized screen capture and analysis.</p>
+        </article>
+      </section>
+
+      <footer>
+        Portfolio © <span id="year"></span> • <a href="https://hackerone.com/kurodko" target="_blank">HackerOne Profile</a>
+      </footer>
+    </main>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
